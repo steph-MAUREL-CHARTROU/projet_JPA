@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  * 
@@ -37,6 +39,17 @@ public class Compte {
 	inverseJoinColumns = @JoinColumn(name = "id_client", referencedColumnName = "id"))
 	
 	private List< Client> clients;
+	
+	@OneToMany
+	@JoinTable(name = "operation_compte",
+	joinColumns = @JoinColumn(name = "id_compte", referencedColumnName = "id"), 
+	inverseJoinColumns = @JoinColumn(name = "id_operation", referencedColumnName = "id"))
+	
+	 private List<Operation> operations;
+	
+	
+	
+	
 	
 	public Compte() {
 		
