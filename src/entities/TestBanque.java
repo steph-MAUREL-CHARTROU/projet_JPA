@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 public class TestBanque {
 	public static void main(String[] args) {
 
-		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("tp-librairie");
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("tp-banque");
 		EntityManager em = entityManagerFactory.createEntityManager();
 		
 		

@@ -37,7 +37,7 @@ public class Client {
 	private Banque banque;
 
 	@ManyToMany
-	@JoinTable(name = "compo",
+	@JoinTable(name = "client_compte",
 	joinColumns = @JoinColumn(name = "id_client", referencedColumnName = "id"), 
 	inverseJoinColumns = @JoinColumn(name = "id_compte", referencedColumnName = "id"))
 
