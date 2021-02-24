@@ -9,6 +9,8 @@ public class TestBanque {
 
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("tp-librairie");
 		EntityManager em = entityManagerFactory.createEntityManager();
+		
+		
 
 	}
 }
