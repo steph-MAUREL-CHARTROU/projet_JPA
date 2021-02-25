@@ -1,30 +1,30 @@
 package entities;
 
 import javax.persistence.Column;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
 @Entity
-public class LivretA {
+public class LivretA extends Compte {
+
+	// L'id est hérité de la classe Compte 
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-	@Column( name="taux")
+	
+	@Column(name = "taux")
 	private double taux;
-	
+
 	public LivretA() {
-		
+
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
+	public LivretA(double taux) {
+		super();
+		this.taux = taux;
 	}
 
 	public double getTaux() {
@@ -34,5 +34,5 @@ public class LivretA {
 	public void setTaux(double taux) {
 		this.taux = taux;
 	}
-	
+
 }

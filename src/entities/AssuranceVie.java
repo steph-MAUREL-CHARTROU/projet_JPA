@@ -1,33 +1,37 @@
 package entities;
 
 import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.Table;
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
 
 @Entity
-public class AssuranceVie {
+@Table(name = "Assurance_Vie")
+public class AssuranceVie extends Compte {
 
-	@Id
-	private int id;
-	
-	@Column( name="date_fin")
+
+	@Column(name = "date_fin")
 	private LocalDate dateFin;
-	
-    @Column( name= "taux")
-    private double taux;
+
+	@Column(name = "taux")
+	private double taux;
 
 	public AssuranceVie() {
-		
+
 	}
 
-	public int getId() {
-		return id;
+	public AssuranceVie( LocalDate dateFin, double taux) {
+		super();
+		this.dateFin = dateFin;
+		this.taux = taux;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public LocalDate getDateFin() {
 		return dateFin;
@@ -43,6 +47,6 @@ public class AssuranceVie {
 
 	public void setTaux(double taux) {
 		this.taux = taux;
-	} 
-	
+	}
+
 }
